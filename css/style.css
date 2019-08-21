@@ -71,15 +71,19 @@ body {
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
-  flex: 0 0 18%; }
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
   background-color: orangered;
+  height: 80rem;
   flex: 1; }
 
 .logo {
   height: 3.25rem;
-  margin-left: 3.5rem; }
+  margin-left: 2rem; }
 
 .search {
   flex: 0 0 40%;
@@ -113,10 +117,79 @@ body {
     fill: var(--color-grey-dark-3); }
 
 .user-nav {
-  background-color: green; }
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .user-nav > * {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    height: 100%;
+    cursor: pointer; }
+  .user-nav > *:hover {
+    background-color: var(--color-grey-ligh-3); }
+  .user-nav__icon-box {
+    position: relative; }
   .user-nav__icon {
     height: 2.25rem;
-    width: 2.25rem; }
+    width: 2.25rem;
+    fill: var(--color-grey-dark-2); }
+  .user-nav__notification {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 900;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .user-nav__user {
+    display: flex;
+    align-items: center; }
   .user-nav__user-photo {
     height: 3.75rem;
-    border-radius: 50%; }
+    border-radius: 50%;
+    margin-right: 2rem; }
+
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem; }
+  .side-nav__link:link, .side-nav__link:visited {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-grey-ligh-1);
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    position: relative;
+    z-index: 1; }
+    .side-nav__link:link:after, .side-nav__link:visited:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      z-index: -1;
+      background-color: var(--color-primary);
+      transition: width .5s; }
+    .side-nav__link:link:hover:after, .side-nav__link:visited:hover:after {
+      width: 100%; }
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: currentColor;
+    margin-right: 2rem; }
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem; }
