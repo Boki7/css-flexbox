@@ -2,56 +2,80 @@
 // LOGO
 
 .logo {
-    height: 3.25rem;
+  height: 3.25rem;
+  margin-left: 3.5rem;
 }
 
 /////////////////////////////
 // SEARCH
 
 .search {
-    &__input {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    width: 90%;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--color-grey-ligh-3);
+    padding: .7rem 2rem;
+    margin-right: -3.5rem;
+    transition: all 0.2s;
+
+    &:focus {
+      width: 100%;
+      border: none;
+      outline: none;
+      color: var(--color-grey-dark-3);
     }
 
-    &__button {
-
+    &::placeholder {
+      font-weight: 100;
+      color: var(--color-grey-ligh-4);
     }
+  }
 
-    &__icon {
-        height: 2rem;
-        width: 2rem;
-    }
+  &__button {
+    background-color: var(--color-grey-ligh-3);
+    border: none;
+  }
 
-
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3);
+  }
 }
 
 /////////////////////////////
 // USER NAVIGATION
 
 .user-nav {
-    &__icon-box {
+  background-color: green;
 
-    }
+  &__icon-box {
+  }
 
-    &__icon {
-        height: 2.25rem;
-        width: 2.25rem;
-    }
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
 
-    &__notification {
+  &__notification {
+  }
 
-    }
+  &__user {
+  }
 
-    &__user {
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+  }
 
-    }
-
-    &__user-photo {
-        height: 3.75rem;
-        border-radius: 50%;
-    }
-
-    &__user-name {
-        
-    }
+  &__user-name {
+  }
 }

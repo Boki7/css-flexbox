@@ -10,6 +10,12 @@
 .header {
     height: 7rem;
     background-color: var(--color-grey-ligh-1);
+    font-size: 1.5rem;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content {
