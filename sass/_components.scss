@@ -189,3 +189,65 @@
     text-align: center;
     padding: 2.5rem;
 }
+
+/////////////////////////////
+// GALLERY
+
+.gallery {
+    display: flex;
+
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+/////////////////////////////
+// OVERVIEW
+
+.overview {
+    border-bottom: 1px solid var(--color-grey-ligh-2);
+    display: flex;
+    align-items: center;
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
+    }
+
+    &__stars {
+        display: flex;
+        margin-right: auto;
+    }
+
+    &__icon-star,
+    &__icon-location-pin {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--color-primary);
+    }
+
+    &__location {
+        display: flex;
+    }
+
+    &__rating {
+
+        &-average {
+
+        }
+
+        &-count {
+
+        }
+
+    }
+
+
+
+
+}
