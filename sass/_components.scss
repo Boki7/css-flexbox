@@ -15,6 +15,11 @@
   justify-content: center;
   align-items: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    flex: 0 0 100%;
+    order: 1;
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -118,11 +123,24 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
 
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+    }
+
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0rem;
+      }
     }
   }
 
@@ -154,6 +172,14 @@
     padding: 1.5rem 3rem;
     position: relative;
     z-index: 10;
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      padding: 0.7rem 3rem;
+    }
   }
 
   &__link:active {
@@ -165,6 +191,13 @@
     height: 1.75rem;
     fill: currentColor;
     margin-right: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 }
 
@@ -176,6 +209,10 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    display: none;
+  }
 }
 
 /////////////////////////////
@@ -204,6 +241,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0.5rem 1.5rem;
+      font-size: 1.7rem;
+    }
   }
 
   &__stars {
@@ -216,6 +258,10 @@
     width: 2rem;
     height: 2rem;
     fill: var(--color-primary);
+    @media only screen and (max-width: $bp-small) {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
   }
 
   &__icon-location-pin {
@@ -239,11 +285,18 @@
 
     &-average {
       font-size: 2.25rem;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.7rem;
+      }
     }
 
     &-count {
       font-size: 0.8rem;
       text-transform: uppercase;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.75rem;
     }
   }
 
@@ -346,6 +399,9 @@
   }
 
   &__friends {
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+    }
   }
 
   &__photo {
@@ -356,7 +412,7 @@
     border: 3px solid #fff;
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
